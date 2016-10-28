@@ -2,7 +2,6 @@
 
 A Salt Demo using Vagrant.
 
-
 ## License
 	
 	Copyright (C) 2016 Mehdi Bekioui (consulting@bekioui.com)
