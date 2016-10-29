@@ -10,8 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     master_config.vm.box = "ubuntu/trusty64"
     master_config.vm.host_name = 'saltmaster.local'
     master_config.vm.network "private_network", ip: "192.168.50.10"
-    master_config.vm.synced_folder "saltstack/pillars/", "/srv/pillars"
-    master_config.vm.synced_folder "saltstack/states/", "/srv/states"
+    master_config.vm.synced_folder "../salt-pillars/pillars/", "/srv/pillars"
+    master_config.vm.synced_folder "../salt-states/states/", "/srv/states"
     master_config.vm.synced_folder "../salt-deliveries/", "/srv/saltd"
 
     master_config.vm.provision :salt do |salt|
