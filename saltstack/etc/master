@@ -626,9 +626,9 @@ file_server_backend:
 #  - git://github.com/saltstack/salt-states.git
 #  - file:///var/git/saltmaster
 
-gitfs_remotes:
-  - https://github.com/MehdiBekioui/salt-states.git:
-    - root: states
+#gitfs_remotes:
+#  - https://github.com/MehdiBekioui/salt-states.git:
+#    - root: states
 
 # The gitfs_ssl_verify option specifies whether to ignore ssl certificate
 # errors when contacting the gitfs backend. You might want to set this to
@@ -662,8 +662,8 @@ pillar_roots:
 #  - hiera: /etc/hiera.yaml
 #  - cmd_yaml: cat /etc/salt/yaml
 
-ext_pillar:
-  - git: master https://github.com/MehdiBekioui/salt-pillars.git root=pillars
+#ext_pillar:
+#  - git: master https://github.com/MehdiBekioui/salt-pillars.git root=pillars
 
 # The ext_pillar_first option allows for external pillar sources to populate
 # before file system pillar. This allows for targeting file system pillar from
