@@ -28,6 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     minion_config.vm.box = "ubuntu/trusty64"
     minion_config.vm.host_name = 'saltminion1.local'
     minion_config.vm.network "private_network", ip: "192.168.50.11"
+    minion_config.vm.network "forwarded_port", guest: 8080, host: 8080
     minion_config.vm.synced_folder "saltstack/env/int1/grains", "/etc/salt/minion.d"
 
     minion_config.vm.provision :salt do |salt|
